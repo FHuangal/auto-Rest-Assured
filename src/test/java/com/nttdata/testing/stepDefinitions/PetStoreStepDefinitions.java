@@ -51,6 +51,6 @@ public class PetStoreStepDefinitions {
 
     @When("^el actor actualiza un Pet con los datos (.*) (.*) (.*) (.*) (.*) (.*) (.*)$")
     public void elActorActualizaUnPetConLosDatos(String category_id, String category_name, String pet_name, String photoUrls, String tag_id, String tag_name, String status) {
-        theActorInTheSpotlight().attemptsTo();
+        theActorInTheSpotlight().attemptsTo(PutPet.fromPage(category_id,category_name,pet_name,photoUrls,tag_id,tag_name,status));
     }
 }
